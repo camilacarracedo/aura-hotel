@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--animacion-->
     <script src="https://kit.fontawesome.com/c3a150fd4e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./assets/icon/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
@@ -31,7 +32,6 @@
 
 <main>
 <section class="indexBackImg">
-    <p class="titulo-transform">Reserva en el mejor Hotel</p> 
     <form action="procesar.php" name="contacto" method="post">
         <div class="formularioCheckin">
             <p>
@@ -53,12 +53,12 @@
         </div>
     </form>
 </section>
-<h1 class="titulos">Aura Hotel & Suites</h1> 
 <section>
     <article class="contenedorBase">
         <div class="base">
-            <h1 class="base__titulo">Sobre Nosotros</h1>
-            <p class="base__texto" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit exercitationem dignissimos consectetur! Voluptatem autem eveniet, doloribus, aspernatur quam sed ullam molestias tempora ipsum veniam mollitia sint laboriosam! Sequi, deserunt aliquid!</p>
+            <h4 class="subtitulo">El alojamiento perfecto en santorini</h4>
+            <h1 class="base__titulo">Aura Hotel & Suites</h1>
+            <p class="base__texto" >Bienvenidos a Aura Hotel & Suites! Las suites acogedoras, inspiradoras y elegantemente clásicas y las instalaciones contemporáneas invitan a los huéspedes a experimentar un alojamiento de lujo incomparable en el mejor hotel de Perissa, Santorini. La belleza escénica de los alrededores se mezcla con el exterior meticuloso del Hotel. Las suites cuentan con piscina, jaccuzzi, terraza privada y vistas impresionantes al mar Egeo. <br> Disfrute de merecidos momentos de relajación y tranquilidad en las piletas del hotel, acceda a nuestro BeachClub y disfrute de una excelente cena en la playa.<p>
             <a class="base__boton" href="./pages/sobrenosotros.html">Mas Informacion</a>
         </div>
         <img class="nosotrosImg" src="./assets/img/sobrenosotrosindex.jpg" alt="Imagen no encontrada" width="500px">
@@ -66,10 +66,10 @@
 </section>
 
 <section class="fondoIndex">
-    <h1 class="titulos">Habitaciones & Suites</h1>
+    <h1 class="titulos">Nuestras Habitaciones & Suites</h1>
     <article class="contenedorHabIndex">
             <div>
-            <img class="habIndex__img" src="./assets/img/habitaciones/grandsuite.jpg" alt="Grandsuite"  ></a>
+            <img class="habIndex__img" src="./assets/img/habitaciones/grandsuite.jpg" alt="Grandsuite"></a>
             <h3 class="habIndex__titulo">Grand Suite con Jacuzzi</h3>
             <p>Amplia y elegante, la Grand Suite consta de un dormitorio principal con una cama King Size en un altillo de planta abierta, un baño con ducha y un segundo dormitorio con Kin...</p>
             <div class="habIndex__icons">
@@ -109,7 +109,7 @@
         <ul>
             <li><i class="fa-solid fa-location-pin"></i>Perissa 847 03, Santorini, Grecia</li>
             <li><i class="fa-solid fa-phone"></i>+30 2286 052874</li>
-            <a class="footerMail" href="mailto:info@aurahotel.com">info@aurahotel.com</a></li>
+            <li></li><a class="footerMail" href="mailto:info@aurahotel.com">info@aurahotel.com</a></li>
         </ul>
     </section>
     <section>
@@ -135,5 +135,9 @@
         </div>
     </section>
 </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
