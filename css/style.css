@@ -93,7 +93,7 @@ footer h3{
 footer ul li{
     color: white;
     font-size: 15px;
-    list-style: none; 
+    list-style: none;
 }
 footer ul li i{
     padding: .3rem;  
@@ -127,7 +127,7 @@ footer ul li i{
     box-sizing: border-box;
 }
 .formularioCheckin{
-    padding-top: 30px;
+    padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
@@ -141,6 +141,7 @@ footer ul li i{
     font-weight: 500;
     text-transform: uppercase;
     padding: 10px;
+    margin-left: 18px;
     cursor: pointer;
     max-width: 146px;
     min-width: 50px;
@@ -164,10 +165,9 @@ footer ul li i{
 .checkinBtn{
     margin-left: 20px;
     margin:10px 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 10px 20px;
     color: #252525;
-    background-color:#fffae6;
+    background-color: #eee8e5;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
@@ -222,6 +222,7 @@ background-color: rgb(77, 128, 221);
     padding: 20px;
     padding-left: 10px;
     border: none; 
+    box-sizing: border-box;
 }
 .fondoIndex{
     background-color: #eee8e5;
@@ -231,13 +232,11 @@ background-color: rgb(77, 128, 221);
 .contenedorHabIndex{
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
 }
 .contenedorHabIndex *{
     max-width: 100%;
     width: 400px;
     text-align: left;
-    padding: 2px 10px;
     margin: 5px;
 }
 .habIndex__titulo{
@@ -246,11 +245,10 @@ background-color: rgb(77, 128, 221);
 }
 .habIndex__icons{
     display: flex;
-    max-width: 40%;
+    max-width: 50%;
     font-size: 15px;
 }
 .habitacionBoton{
-    margin-left: 20px;
     color: #252525;
     text-decoration: none;
     text-transform: uppercase;
@@ -285,6 +283,7 @@ background-color: rgb(77, 128, 221);
 .contenedorActividades *{
     text-align: center;
     padding: 10px;
+    font-size: 18px;
 }
 .actividadesImg{
     width: 90%;
@@ -387,6 +386,7 @@ background-color: rgb(77, 128, 221);
 .map{
     width: 50%;
     padding: 20px;
+    box-sizing: border-box;
 }
 .contacto-list{
     color: #252525;
@@ -419,6 +419,9 @@ background-color: rgb(77, 128, 221);
     border-top: 8px solid rgb(77, 128, 221);
     padding: 40px 20px;
     margin-top: 20px;
+}
+.formulario form{
+    max-width: 100%;
 }
 .formularioImg{
     max-width: 60%;
@@ -467,7 +470,7 @@ background-color: rgb(77, 128, 221);
     box-sizing: border-box;
 }
 .contenedorHabitaciones{
-    padding: 30px;
+    padding: 0 30px;
     line-height: 22px;
 }
 .contenedorHabitaciones *{
@@ -483,6 +486,10 @@ background-color: rgb(77, 128, 221);
     list-style: none;
     padding: 0;
 }
+.habitaciones-img{
+    max-width: 100%;
+    width: 600px;
+}
 .grand-junior-suite{
     background-color: #eee8e5;
     display: flex;
@@ -490,9 +497,6 @@ background-color: rgb(77, 128, 221);
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: justify;
-}
-.grand-junior-suite img {
-    max-width: 600px;
 }
 .superiorSuite{
     font-size: 15px;
@@ -502,10 +506,6 @@ background-color: rgb(77, 128, 221);
     text-align-last: right;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-.superiorSuite img{
-    max-width: 600px;
-    height: 400px;
 }
 .grand-junior-icons{
     display: flex;
@@ -560,8 +560,11 @@ header{
     justify-content: center;
     position:static;
 }
+.logo{
+    padding-bottom: 10px;
+}
 .nav__list{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .boton a{
     display: block;
@@ -577,44 +580,61 @@ footer section{
     max-width: 100%;
 }
 /*index*/
+.formularioCheckin p{
+    border: none;
+    margin-left: 0;
+}
+.formularioCheckin input{
+    font-size: 15px;
+}
+.checkinBtn{
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .contenedorBase{
     flex-direction: column;
     align-items: center;
 }
+.base{
+    width: 80%;
+}
+.nosotrosImg{
+    width: 85%;
+}
 .contenedorHabIndex{
     flex-direction: column;
+    align-items: center;
 }
 .titulo-transform{
     transform: rotate(-5deg) translate(-50px, -10px);
-}
-.checkinBtn{
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 /*actividades*/
 .contenedorActividades{
     flex-direction: column;
 }
+.perissaImg{
+    width: 80%;
+    padding: 20px;
+}
 /*contacto*/
-
 .map{
-    width: 500px;
+    width: 100%;
+}
+.formTexto{
+    padding: 20px;
 }
 /*habitaciones*/
 .grand-junior-suite{
     flex-direction: column;
     justify-content: center;
-}
-.grand-junior-suite img{
-    max-width: 500px;
+    text-align: left;
 }
 .superiorSuite{
     flex-direction: column-reverse;
     justify-content: center;
+    text-align: left;
     text-align-last: left;
-}
-.superiorSuite img{
-    max-width: 500px;
 }
 .superior-icons{
     justify-content: end;
@@ -624,7 +644,8 @@ footer section{
 }
 /*sobre nosotros*/
 .sobreNosImg{
-    max-width: 100%;
+    max-width: 90%;
+    padding: 8px;
 }
 .fondo{
     max-width: 70%;
