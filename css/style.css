@@ -56,19 +56,23 @@ header a{
     font-size: 15px;
     cursor: pointer;
     font-weight: 500;
-    background-color: #ccc;
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #252525;
+    background-color: #ccc;
     text-transform: uppercase;
-    transition-duration: 0.8s;
+    position: relative;
+    background:linear-gradient(to right, #ccc 50%, rgb(77, 128, 221) 50%);
+    background-size:200% 100%;
+    background-position:0 0;
+    transition:background-position .3s ease-out;
 }
 .boton a:hover{
+    background-position:-100% 0;
     color: white;
-    background-color: rgb(77, 128, 221);
-    }
+}
 /*footer*/
 footer{
     box-sizing: border-box;
@@ -167,18 +171,18 @@ footer ul li i{
     margin:10px 20px;
     padding: 10px 20px;
     color: #252525;
-    background-color: #eee8e5;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
     border: none;
     text-transform: uppercase;
     cursor: pointer;
-    transition: .8s;
-}   
+    transition-duration: 0.8s;
+    background-color: #eee8e5;
+}
 .checkinBtn:hover{
-color: white;
-background-color: rgb(77, 128, 221);
+    background-color:rgb(77, 128, 221);
+    color: white;
 }
 .contenedorBase{
     display: flex;
@@ -204,14 +208,13 @@ background-color: rgb(77, 128, 221);
     line-height: 22px;
 }
 .base__boton{
-    background-color: white;
-    border: 2px solid rgb(77, 128, 221);
-    color: rgb(77, 128, 221);
+    padding: 10px 0;
+    color: #252525;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 10px;
     font-size: 15px;
     transition-duration: 0.8s;
+    border-bottom: 2px solid rgb(77, 128, 221);
 }
 .base__boton:hover{
     color: white;
@@ -251,6 +254,7 @@ background-color: rgb(77, 128, 221);
 .habitacionBoton{
     color: #252525;
     text-decoration: none;
+    padding: 10px 0;
     text-transform: uppercase;
     font-size: 15px;
     transition-duration: 0.8s;
@@ -325,6 +329,11 @@ background-color: rgb(77, 128, 221);
     width: 60%;
     margin: 2rem auto; 
 } 
+.textTransform{
+    font-family: 'Waterfall', cursive;
+    font-size: 90px;
+    transform: translate(-200px, -150px) rotate(-40deg);
+}
 .list-facilities{
     display: flex;
     flex-wrap: wrap;
@@ -349,6 +358,10 @@ background-color: rgb(77, 128, 221);
 .galleryNos__img {
     width: 100%;
     height: 100%;
+    transition: 0.3s ease all;
+}
+.galleryNos__img:hover {
+    transform: scale(1.02);
 }
 .galleryNos__item--1 {
     grid-column: 1/2;
@@ -489,6 +502,10 @@ background-color: rgb(77, 128, 221);
 .habitaciones-img{
     max-width: 100%;
     width: 600px;
+    transition: 0.3s ease all;
+}
+.habitaciones-img:hover {
+    transform: scale(1.02);
 }
 .grand-junior-suite{
     background-color: #eee8e5;
