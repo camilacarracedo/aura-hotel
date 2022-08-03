@@ -30,24 +30,27 @@ h1, h2, h3, h4, h5, h6 {
 /*Header*/
 header{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 0px 20px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: white;
+    width: 70%;
 }
-header a{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+.navbar-collapse{
+    flex-grow: initial;
 }
-.nav__list{
-    display: flex;
-    list-style-type: none;
-}
-.nav__list .list__links{
-    padding: 0 10px;
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #252525;
 }
 .boton{
     border: none;
@@ -56,13 +59,11 @@ header a{
     font-size: 15px;
     cursor: pointer;
     font-weight: 500;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 15px;
     color: #252525;
     background-color: #ccc;
     text-transform: uppercase;
+    text-decoration: none;
     position: relative;
     background:linear-gradient(to right, #ccc 50%, rgb(77, 128, 221) 50%);
     background-size:200% 100%;
@@ -78,12 +79,10 @@ footer{
     box-sizing: border-box;
     display: flex;
     justify-content:space-between;
-    align-items: center;
     background-color: #252525;
     width: 100%;
     padding: 30px;
     text-decoration: none;
-    text-align: left;
     line-height: 22px;
 }
 footer section{
@@ -93,6 +92,7 @@ footer section{
 footer h3{
     font-size: 18px;
     color: white;
+    text-align: center;
 }
 footer ul li{
     color: white;
@@ -101,6 +101,16 @@ footer ul li{
 }
 footer ul li i{
     padding: .3rem;  
+}
+/*icono Bootstrap*/
+.bi{
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    color: #fffae6;
+    cursor: pointer;
+}
+.bi:hover{
+    color: rgb(77, 128, 221);
 }
 .footerMail{
     color: white;
@@ -112,13 +122,8 @@ footer ul li i{
     text-align: center;
     margin-top: 20px;
 }
-.redesSociales i{
-    padding: .3rem;
-    color: #fffae6;
-    cursor: pointer;
-}
-.redesSociales i:hover{
-    color: rgb(77, 128, 221);
+.redesSociales *{
+    text-decoration: none;
 }
 /*index*/
 .indexBackImg{
@@ -135,6 +140,7 @@ footer ul li i{
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
+    align-items: center;
     box-sizing:content-box; 
 }
 .formularioCheckin p{
@@ -145,14 +151,14 @@ footer ul li i{
     font-weight: 500;
     text-transform: uppercase;
     padding: 10px;
-    margin-left: 18px;
+    margin-left: 30px;
     cursor: pointer;
-    max-width: 146px;
+    max-width: 160px;
     min-width: 50px;
     width: 100%;
 }
 .formularioCheckin i{
-    padding: .3rem;  
+    padding: .3rem; 
 }
 .formularioCheckin input{
     border: none;
@@ -160,15 +166,14 @@ footer ul li i{
     background: none;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
 }
 .checkinHuespedes{
     width: 60px;
 }
-.checkinBtn{
-    margin-left: 20px;
-    margin:10px 20px;
+.checkinBoton{
+    margin: 20px;
     padding: 10px 20px;
     color: #252525;
     font-family: 'Montserrat', sans-serif;
@@ -180,7 +185,7 @@ footer ul li i{
     transition-duration: 0.8s;
     background-color: #eee8e5;
 }
-.checkinBtn:hover{
+.checkinBoton:hover{
     background-color:rgb(77, 128, 221);
     color: white;
 }
@@ -220,12 +225,15 @@ footer ul li i{
     color: white;
     background-color: rgb(77, 128, 221);
 }
-.nosotrosImg{
-    max-width: 100%;
+.carousel-item {
     padding: 20px;
-    padding-left: 10px;
-    border: none; 
-    box-sizing: border-box;
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .fondoIndex{
     background-color: #eee8e5;
@@ -280,24 +288,22 @@ footer ul li i{
     font-size: 100px;
 }
 .contenedorActividades{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 20px 50px;
+    margin: 20px 30px;
 }
 .contenedorActividades *{
     text-align: center;
     padding: 10px;
     font-size: 18px;
 }
-.actividadesImg{
-    width: 90%;
+.card{
+    border: none;
 }
 .playas{
     background-color: #eee8e5;
 }
 .perissaImg{
-    width: 430px;
-    padding: 80px;
+    width: 500px;
+    padding: 50px;
     border: none;
 }
 .lista-playas{
@@ -305,7 +311,7 @@ footer ul li i{
     font-size: 18px;
 }
 .lista-playas li{
-    padding: 10px;
+    padding: 3px;
 }
 /*Sobre Nosotros*/
 .nosotrosBackImg{
@@ -427,6 +433,7 @@ footer ul li i{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     border-radius: 5px;
     text-transform: uppercase;
     border-top: 8px solid rgb(77, 128, 221);
@@ -437,7 +444,8 @@ footer ul li i{
     max-width: 100%;
 }
 .formularioImg{
-    max-width: 60%;
+    max-height: 500px;
+    max-width: 80%;
 }
 .formulario p{
     text-align: left;
@@ -455,7 +463,7 @@ footer ul li i{
     box-sizing: border-box; 
 }
 .formulario input[type=submit] {
-    background-color: rgb(77, 128, 221) ;
+    background-color: rgb(173, 173, 173) ;
     color: #252525;
     margin-top: 5px;
     padding: 12px 20px;
@@ -467,7 +475,6 @@ footer ul li i{
     float: right
 }
 .formulario input[type=submit]:hover {
-    background-color: rgb(173, 173, 173);
     background: inherit;
     border-bottom: 2px solid rgb(77, 128, 221);
 }
@@ -486,43 +493,37 @@ footer ul li i{
     padding: 0 30px;
     line-height: 22px;
 }
-.contenedorHabitaciones *{
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
+.contenedorHabitaciones article h3{
+    padding-top: 20px;
 }
 .contenedorHabitaciones article p{
     font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .contenedorHabitaciones ul li{
     font-size: 13px;
     list-style: none;
-    padding: 0;
+    padding-right: 2rem;
 }
-.habitaciones-img{
-    max-width: 100%;
-    width: 600px;
-    transition: 0.3s ease all;
-}
-.habitaciones-img:hover {
-    transform: scale(1.02);
+.room{
+    width: 550px;
 }
 .grand-junior-suite{
     background-color: #eee8e5;
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 40px 0;
     text-align: justify;
+    padding: 20px;
 }
 .superiorSuite{
-    font-size: 15px;
     display: flex;
     align-items: center;
     text-align: justify;
     text-align-last: right;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin:40px 0;
+    padding: 20px;
 }
 .grand-junior-icons{
     display: flex;
@@ -539,32 +540,33 @@ footer ul li i{
 .grand-junior-boton{
     float: right;
     margin-right: 10px;
+    padding: 3px;
     color: #252525;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
     transition-duration: 0.8s;
-    color: white;
-    background-color: rgb(77, 128, 221);
+    border-bottom: solid 2px rgb(77, 128, 221); 
 }
 .grand-junior-boton:hover{
-    background-color:white;
-    color: #252525;
+    background-color:  rgb(77, 128, 221);
+    color: white;
 }
 .superior-boton{
     float: left;
-    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
     color: #252525;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
     transition-duration: 0.8s;
-    color: white;
-    background-color: rgb(77, 128, 221);
+    border-bottom: solid 2px rgb(77, 128, 221); 
+
 }
 .superior-boton:hover{
-    background-color: #ccc;
-    color: #252525;
+    background-color:  rgb(77, 128, 221);
+    color: white;
 }
 
 @media only screen and (max-width:768px){
@@ -572,21 +574,16 @@ footer ul li i{
 }
 @media only screen and (max-width:576px){
 /*generales*/
-header{
+header {
     flex-direction: column;
     justify-content: center;
-    position:static;
+    position: static;
 }
 .logo{
     padding-bottom: 10px;
 }
-.nav__list{
-    margin-bottom: 20px;
-}
 .boton a{
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    display: none;
 }
 footer{
     flex-direction: column;
@@ -627,9 +624,6 @@ footer section{
     transform: rotate(-5deg) translate(-50px, -10px);
 }
 /*actividades*/
-.contenedorActividades{
-    flex-direction: column;
-}
 .perissaImg{
     width: 80%;
     padding: 20px;
@@ -642,6 +636,9 @@ footer section{
     padding: 20px;
 }
 /*habitaciones*/
+.d-block{
+    max-width: 100%;
+}
 .grand-junior-suite{
     flex-direction: column;
     justify-content: center;
@@ -667,8 +664,8 @@ footer section{
 .fondo{
     max-width: 70%;
 }
-.text-transform{
-    transform: translate(-100px)rotate(-40deg);
+.textTransform{
+    transform: translate(-130px, -50px) rotate(-40deg);
 }
 .galleryNos{
     grid-template-columns: 1fr;
