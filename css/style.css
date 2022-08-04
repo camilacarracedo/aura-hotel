@@ -49,6 +49,10 @@ header{
 .navbar-collapse{
     flex-grow: initial;
 }
+.navbar-toggler{
+    border: none;
+    color: rgb(77, 128, 221);
+}
 .navbar-expand-lg .navbar-nav .nav-link{
     color: #252525;
 }
@@ -501,7 +505,7 @@ footer ul li i{
     padding-left: 5px;
     padding-right: 5px;
 }
-.contenedorHabitaciones ul li{
+.services-list li{
     font-size: 13px;
     list-style: none;
     padding-right: 2rem;
@@ -568,9 +572,118 @@ footer ul li i{
     background-color:  rgb(77, 128, 221);
     color: white;
 }
-
+.modal{
+    --bs-modal-width: 880px;
+    text-align-last: left;
+}
+.modal-body h6{
+    color: rgb(77, 128, 221) ;
+    font-family: 'Montserrat', sans-serif;
+}
+.habitaciones-list{
+    column-count: 2;
+    column-gap: 15px;
+    text-align: left;
+}
+.habitaciones-list li{
+    margin-left: 15px;
+    line-height: 1.8;
+}
 @media only screen and (max-width:768px){
-
+/*generales*/
+.titulos{
+    font-size: 25px;
+}
+.navbar{
+    width: 100%;
+}
+.navbar-logo{
+    width: 90px;
+}
+.boton a{
+    display: none;
+}
+footer section {
+    max-width: 100%;
+}
+footer h3 {
+    font-size: 15px;
+}
+.footer-logo{
+    width: 90px;
+}
+/*index*/
+.base__texto{
+    font-size: 16px;
+}
+.base__titulo{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.carousel-item.active{
+    width: 400px;
+}
+.HabIndex{
+    width: 33.33%;
+}
+/*Actividades*/
+.contenedorActividades *{
+    padding: 4px;
+}
+.card-text{
+    font-size: 16px;
+}
+.perissaImg{
+    width: 80%;
+    padding: 20px;
+}
+.lista-playas{
+    font-size: 16px;
+}
+/*Contacto*/
+.map{
+    width: 80%;
+}
+/*Habitaciones*/
+.carousel-item.active.Hab{
+    width: 100%;
+}
+.grand-junior-suite{
+    flex-direction: column;
+    text-align: left;
+}
+.superiorSuite{
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: left;
+    text-align-last: left;
+}
+.superior-icons{
+    justify-content: end;
+}
+.superior-boton{
+    float: right;
+}
+.modal {
+    --bs-modal-width: 500px;
+}
+.modal-body{
+    font-size: 16px;
+}
+/*Sobre Nosotros*/
+.sobreNosImg{
+    max-width: 60%;
+}
+.fondo{
+    width: 80%;
+}
+.textTransform{
+    transform: translate(-160px, -120px) rotate(-40deg);;
+}
+.list-facilities{
+    padding: 0;
+    justify-content: center;
+}
 }
 @media only screen and (max-width:576px){
 /*generales*/
@@ -579,8 +692,11 @@ header {
     justify-content: center;
     position: static;
 }
-.logo{
-    padding-bottom: 10px;
+.titulos{
+    font-size: 25px;
+}
+.navbar-logo{
+    width: 90px;
 }
 .boton a{
     display: none;
@@ -593,7 +709,19 @@ footer{
 footer section{
     max-width: 100%;
 }
+footer h3 {
+    font-size: 15px;
+}
+.footer-logo{
+    width: 90px;
+}
 /*index*/
+.base__texto{
+    font-size: 16px;
+}
+.base__titulo{
+    font-size: 25px;
+}
 .formularioCheckin p{
     border: none;
     margin-left: 0;
@@ -620,13 +748,27 @@ footer section{
     flex-direction: column;
     align-items: center;
 }
+.HabIndex{
+    width: 400px;
+}
 .titulo-transform{
     transform: rotate(-5deg) translate(-50px, -10px);
 }
 /*actividades*/
+.card-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-text{
+    font-size: 16px;
+}
 .perissaImg{
     width: 80%;
     padding: 20px;
+}
+.lista-playas{
+    font-size: 16px;
 }
 /*contacto*/
 .map{
@@ -655,6 +797,12 @@ footer section{
 }
 .superior-boton{
     float: right;
+}
+.modal {
+    --bs-modal-width: 500px;
+}
+.modal-body{
+    font-size: 16px;
 }
 /*sobre nosotros*/
 .sobreNosImg{
