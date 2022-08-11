@@ -1,0 +1,84 @@
+.contactoBackImg {
+    @include bgimg-sizes(100%, 400px );
+    background-image: url(../assets/img/pagContacto/backimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    box-sizing: border-box;
+}
+.map {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.contacto-list {
+    color: $text-color;
+    list-style: none;
+    i {
+        padding: 5px;
+    }
+    a {
+        color: $text-color;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+.contenedorFormulario {
+    background-color: map-get($estilos , color-bgsections );
+    padding-top: 10px;
+}
+.formTexto {
+    text-align: center;
+    padding: 20px 80px;
+    list-style: none;
+}
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border-top: 8px solid $primary-color;
+    padding: 40px 20px;
+    margin-top: 20px;
+    .formularioImg {
+    max-height: 500px;
+    max-width: 80%;
+    }
+    form {
+        max-width: 100%;
+        p {
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+            padding-top: 10px;
+        }
+    }
+    input[type=text], [type=email], [type=tel], textarea {
+        font-size: $size-smtext;
+        width: 400px;
+        padding: 12px;
+        background: none;
+        border: none;
+        border-bottom: $text-color solid 2px;
+        box-sizing: border-box;
+    }
+    input[type=submit] {
+        background-color: map-get($estilos , color-bgsections);
+        color: $text-color;
+        margin-top: 5px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: $sizeDsk-text;
+        text-transform: uppercase;
+        float: right;
+        &:hover {
+            background: inherit;
+            border-bottom: 2px solid $primary-color;
+        } 
+    }
+}

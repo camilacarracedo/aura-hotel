@@ -1,0 +1,24 @@
+//variables
+$primary-color: #3e70fe;
+$text-color: #252525;
+$text-color-light: white;
+
+$button-border: none;
+
+$text-fonts: "Montserrat", sans-serif;
+$title-fonts: "Prata", serif;
+
+$sizeDsk-titles: 30px;
+$sizeDsk-text: 18px;
+$size-smtext: 15px;
+$primary-lineHeight: 22px;
+//map
+$estilos: (
+    color-bgsections:#eee8e5,
+    color-btnnavbar:#ccc,
+);
+//mixin
+@mixin bgimg-sizes ($width, $height) {
+    width: $width ;
+    height: $height;
+}

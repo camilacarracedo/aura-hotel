@@ -1,0 +1,145 @@
+/*index*/
+.indexBackImg {
+    @include bgimg-sizes(100%, 400px );
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../assets/img/bkimgindex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+.formularioCheckin {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    p{
+        border-left: $text-color solid 1px;
+        text-align: center;
+        font-size: 12px;
+        line-height: $primary-lineHeight;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px;
+        margin-left: 30px;
+        cursor: pointer;
+        max-width: 160px;
+        min-width: 50px;
+        width: 100%;
+    }
+    input{
+        border: none;
+        text-align: center;
+        background: none;
+        padding: 5px;
+        font-family: $text-fonts;
+        font-size: $sizeDsk-text;
+        cursor: pointer;
+    }
+    i{
+        padding: 0.3rem;
+    }
+}
+.checkinHuespedes {
+    width: 60px;
+}
+.checkinBoton {
+    margin: 20px;
+    padding: 10px 20px;
+    color: $text-color;
+    font-family: $text-fonts;
+    font-size: $size-smtext;
+    font-weight: 500;
+    border: $button-border;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    background-color: map-get($estilos , color-bgsections );
+    &:hover{
+        background-color: $primary-color;
+        color: $text-color-light;
+    }
+}
+.contenedorBase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+.base {
+    width: 500px;
+}
+.base__titulo {
+    text-align: left;
+    font-size: $sizeDsk-titles;
+    border-bottom: 0.5px solid $text-color;
+}
+.base__texto {
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: $sizeDsk-text;
+    line-height: $primary-lineHeight;
+}
+.base__boton {
+    padding: 10px 0;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $size-smtext;
+    transition-duration: 0.8s;
+    border-bottom: 2px solid $primary-color;
+    &:hover {
+        color: $text-color-light;
+        background-color: $primary-color;
+    }
+}
+.carousel-item {
+    padding: 20px;
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.fondoIndex {
+    background-color: map-get($estilos , color-bgsections);
+    padding: 50px;
+    line-height: $primary-lineHeight;
+}
+.contenedorHabIndex {
+    display: flex;
+    justify-content: space-evenly;
+    * {
+        max-width: 100%;
+        width: 400px;
+        text-align: left;
+        margin: 5px;
+    }
+}
+.habIndex__titulo {
+    font-size: $sizeDsk-text;
+    border-bottom: 0.5px solid $text-color;
+}
+.habIndex__icons {
+    display: flex;
+    max-width: 50%;
+    font-size: $size-smtext
+}
+.habitacionBoton {
+    color: $text-color;
+    text-decoration: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: $size-smtext;
+    transition-duration: 0.8s;
+    border-bottom: 2px solid $primary-color;
+    &:hover {
+        color: $text-color-light;
+        background-color: $primary-color;
+    }
+}

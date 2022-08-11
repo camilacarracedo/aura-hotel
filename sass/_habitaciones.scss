@@ -1,0 +1,104 @@
+.habitacionesBackImg {
+    @include bgimg-sizes(100%, 400px );
+    background-image: url(../assets/img/habitaciones/backImgHabitaciones.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+.contenedorHabitaciones {
+    padding: 0 30px;
+    line-height: 22px;
+    article {
+        h3 {
+        padding-top: 20px;
+        }
+        p {
+            font-size: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+}
+.services-list li {
+    font-size: 13px;
+    list-style: none;
+    padding-right: 2rem;
+}
+.room {
+    width: 550px;
+}
+.grand-junior-suite {
+    background-color: map-get($estilos , color-bgsections );
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    text-align: justify;
+    padding: 20px;
+}
+.superiorSuite {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    text-align-last: right;
+    margin: 40px 0;
+    padding: 20px;
+}
+.grand-junior-icons {
+    display: flex;
+    justify-content: end;
+    max-width: 100%;
+    font-size: $size-smtext;
+}
+.superior-icons {
+    display: flex;
+    justify-content: start;
+    max-width: 100%;
+    font-size: $size-smtext;
+}
+.grand-junior-boton {
+    float: right;
+    margin-right: 10px;
+    padding: 3px;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $size-smtext;
+    transition-duration: 0.8s;
+    border-bottom: solid 2px $primary-color;
+    &:hover {
+        background-color: $primary-color;
+        color: $text-color-light;
+    }
+}
+.superior-boton {
+    float: left;
+    margin-right: 10px;
+    padding: 3px;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $size-smtext;
+    transition-duration: 0.8s;
+    border-bottom: solid 2px $primary-color;
+    &:hover {
+        @extend .grand-junior-boton:hover;
+    }   
+}
+.modal {
+    --bs-modal-width: 880px;
+    text-align-last: left;
+}
+.modal-body h6 {
+    color: $primary-color;
+    font-family: $text-fonts;
+}
+.habitaciones-list {
+    column-count: 2;
+    column-gap: 15px;
+    text-align: left;
+    li {
+        margin-left: 15px;
+        line-height: 1.8;
+    }
+}

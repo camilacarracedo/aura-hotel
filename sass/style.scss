@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import "base.scss";
+@import "index.scss";
+@import "actividades.scss";
+@import "sobrenosotros.scss";
+@import "contacto.scss";
+@import "habitaciones.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    font-family: $text-fonts;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-fonts;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.titulos {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: $sizeDsk-titles;
+    line-height: 30px;
+}
+
+.subtitulo {
+    font-size: 13px;
+    padding-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+/*header*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: $text-color-light;
+    padding: 0px 20px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: $text-color-light;
+    width: 70%;
+}
+.navbar-collapse {
+    flex-grow: initial;
+}
+.navbar-toggler {
+    border: none;
+    color:  $primary-color;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: $text-color;
+}
+.boton{
+    border: $button-border;
+    a{
+    font-size: $size-smtext;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 15px;
+    color: $text-color;
+    background-color: map-get($estilos , color-btnnavbar );
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    background: linear-gradient(to right, map-get($estilos , color-btnnavbar) 50%, $primary-color 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    transition: background-position 0.3s ease-out;
+    &:hover{
+        background-position: -100% 0;
+        color: $text-color-light;
+    }
+    }
+}
+/*footer*/
+footer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: $text-color;
+    width: 100%;
+    padding: 30px;
+    text-decoration: none;
+    line-height: $primary-lineHeight;
+    section{
+        padding: 10px;
+        max-width: 25%;
+        h3{
+            font-size: $sizeDsk-text;
+            color: $text-color-light;
+            text-align: center;
+        }
+        ul {
+            li{
+            color: $text-color-light;
+            font-size: $size-smtext;
+            list-style: none;
+            i{
+                padding: 0.3rem;
+            }
+            }
+        }
+    }
+}
+.bi {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    color: $text-color-light;
+    cursor: pointer;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.footerMail {
+    color: $text-color-light;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.redesSociales {
+    text-align: center;
+    margin-top: 20px;
+    * {
+        text-decoration: none;
+    }
+}
+/*mediaquerys*/
+@media only screen and (max-width: 768px) {
+/*generales*/
+.titulos {
+    font-size: 25px;
+}
+.navbar {
+    width: 100%;
+}
+.navbar-logo {
+    margin-right: 100px;
+}
+  footer section {
+    max-width: 100%;
+}
+footer h3 {
+    font-size: 15px;
+}
+.footer-logo {
+    width: 90px;
+}
+/*index*/
+.base__texto {
+    font-size: 16px;
+}
+.base__titulo {
+    font-size: 25px;
+    padding-top: 10px;
+}
+.carousel-item.active {
+    width: 400px;
+}
+.HabIndex {
+    width: 33.33%;
+}
+/*Actividades*/
+.contenedorActividades * {
+    padding: 4px;
+}
+.card-text {
+    font-size: 16px;
+}
+.perissaImg {
+    width: 80%;
+    padding: 20px;
+}
+.lista-playas {
+    font-size: 16px;
+}
+/*Contacto*/
+.map {
+    width: 80%;
+}
+/*Habitaciones*/
+.carousel-item.active.Hab {
+    width: 100%;
+}
+.grand-junior-suite {
+    flex-direction: column;
+    text-align: left;
+}
+.superiorSuite {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: left;
+    text-align-last: left;
+}
+.superior-icons {
+    justify-content: end;
+}
+.superior-boton {
+    float: right;
+}
+.modal {
+    --bs-modal-width: 500px;
+}
+.modal-body {
+    font-size: 16px;
+}
+/*Sobre Nosotros*/
+.sobreNosImg {
+    max-width: 60%;
+}.fondo {
+    width: 80%;
+}
+.textTransform {
+    transform: translate(-160px, -120px) rotate(-40deg);
+}
+.list-facilities {
+    padding: 0;
+    justify-content: center;
+}
+}
+@media only screen and (max-width: 576px) {
+/*generales*/
+header {
+    flex-direction: column;
+    justify-content: center;
+    position: static;
+}
+.titulos {
+    font-size: 25px;
+}
+.boton a {
+    display: none;
+}
+.navbar-logo {
+    margin-right: 0;
+}
+footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+footer section {
+    max-width: 100%;
+}
+footer h3 {
+    font-size: 15px;
+}
+.footer-logo {
+    width: 90px;
+}
+/*index*/
+.base__texto {
+    font-size: 16px;
+}
+.base__titulo {
+    font-size: 25px;
+}
+.formularioCheckin p {
+    border: none;
+    margin-left: 0;
+}
+.formularioCheckin input {
+    font-size: 15px;
+}
+.checkinBtn {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.contenedorBase {
+    flex-direction: column;
+    align-items: center;
+}
+.base {
+    width: 80%;
+}
+.nosotrosImg {
+    width: 85%;
+}
+.contenedorHabIndex {
+    flex-direction: column;
+    align-items: center;
+}
+.HabIndex {
+    width: 400px;
+}
+.titulo-transform {
+    transform: rotate(-5deg) translate(-50px, -10px);
+}
+/*actividades*/
+.card-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-text {
+    font-size: 16px;
+}
+.perissaImg {
+    width: 80%;
+    padding: 20px;
+}
+.lista-playas {
+    font-size: 16px;
+}
+/*contacto*/
+.map {
+    width: 100%;
+}
+.formTexto {
+    padding: 20px;
+}
+/*habitaciones*/
+.d-block {
+    max-width: 100%;
+}
+.grand-junior-suite {
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.superiorSuite {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: left;
+    text-align-last: left;
+}
+.superior-icons {
+    justify-content: end;
+}
+.superior-boton {
+    float: right;
+}
+.modal {
+    --bs-modal-width: 500px;
+}
+.modal-body {
+    font-size: 16px;
+}
+/*sobre nosotros*/
+.sobreNosImg {
+    max-width: 90%;
+    padding: 8px;
+}
+.fondo {
+    max-width: 70%;
+}
+.textTransform {
+    transform: translate(-130px, -50px) rotate(-40deg);
+}
+.galleryNos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+}
+.galleryNos__item--1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.galleryNos__item--2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.galleryNos__item--3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.galleryNos__item--4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.galleryNos__item--5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+}
+
+/*# sourceMappingURL=style.css.map */

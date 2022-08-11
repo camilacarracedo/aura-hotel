@@ -1,0 +1,40 @@
+/*Actividades*/
+.actividadesBackImg {
+    @include bgimg-sizes(100%, 400px);
+    background-image: url(../assets/img/pagActividades/backimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    box-sizing: border-box;
+}
+.palabra-transform {
+    font-family: "Waterfall", cursive;
+    text-transform: lowercase;
+    font-size: 100px;
+}
+.contenedorActividades {
+    margin: 20px 30px;
+    * {
+        text-align: center;
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+.card {
+    border: none;
+}
+.playas {
+    background-color: map-get($estilos , color-bgsections );
+}
+.perissaImg {
+    width: 500px;
+    padding: 50px;
+    border: none;
+}
+.lista-playas {
+    padding: 20px;
+    font-size: $sizeDsk-text;
+    li {
+        padding: 3px;
+    }
+}
