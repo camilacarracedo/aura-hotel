@@ -566,7 +566,7 @@ footer {
   .base__titulo {
     font-size: 25px;
     padding-top: 10px; }
-  .carousel-item.active {
+  .carousel-item .Hab {
     width: 400px; }
   .HabIndex {
     width: 33.33%; }
