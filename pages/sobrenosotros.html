@@ -45,7 +45,7 @@
     </nav>
     <div>
         <button class="boton" >
-            <a href="#">Contactanos</a>
+            <a href="../pages/contacto.html">Contactanos</a>
         </button>  
     </div>
 </header>
@@ -58,7 +58,7 @@
             <p class="base__texto">Aura Hotel & Suites se encuentra en la playa de Perissa, rodeado de paz, tranquilidad y la privacidad que busca. Cuenta con 18 piscinas privadas, ofrece relajación y bienestar.
             Su atmósfera romántica, espacios altamente estéticos, amplia variedad de instalaciones y servicios, así como su auténtica hospitalidad, constituyen una experiencia vacacional única que disfrutará durante su estadía en la encantadora Santorini.</p>
         </div>
-        <img class="sobreNosImg" src="../assets/img/pagSobreNos/aboutus.jpg" alt=""></li>
+        <img class="sobreNosImg" src="../assets/img/pagSobreNos/SobreNos-.jpg" alt="SobreNosotros"></li>
     </section>
     <section class="fondo">
         <article>
@@ -70,8 +70,38 @@
                 <li>Room Service -</li>
                 <li>Snack Bar -</li>
                 <li>Laundry -</li>
-                <a class="boton-facilities" href="#">ver mas</a>
+                <a class="boton-facilities" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">ver mas</a>
             </ul>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="habitaciones-list">
+                                <li>Servicio de Transfer Aeropuerto/Puerto</li>
+                                <li>Recepción 24 horas</li>
+                                <li>Resposeras y sombrillas en la playa</li>
+                                <li>Toallas de playa</li>
+                                <li>Dia de Spa (bajo petición)</li>
+                                <li>Viajes en bote (costo adicional)</li>
+                                <li>Alquiler de coches y motos (costo adicional)</li>
+                                <li>Aire acondicionado controlado individualmente</li>
+                                <li>Gimnasio</li>
+                                <li>Parking Area</li>
+                                <li>Piscina</li>
+                                <li>Resposeras y sombrillas en la piscina</li>
+                                <li>Caja de seguridad</li>
+                                <li>Acceso a Internet Wi-Fi (sin cargo)</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <p class="textTransform">Enjoy.</p> 
         </article>
         <article class="galleryNos">
@@ -116,13 +146,13 @@
     <section>
         <h3>Seguinos en nuestras redes</h3>
         <div class="redesSociales">
-            <a href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/" target="_blank">
                 <i class="bi bi-instagram"></i>
             </a>
-            <a href="https://www.pinterest.com/">
+            <a href="https://www.pinterest.com/" target="_blank">
                 <i class="bi bi-pinterest"></i>
             </a>
-            <a href="#"></a>
+            <a href="#" target="_blank">
                 <i class="bi bi-whatsapp"></i>
             </a>
         </div>
