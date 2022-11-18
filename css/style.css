@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: content-box; }
-  .formularioCheckin p {
+  .formularioCheckin div {
     border-left: #252525 solid 1px;
     text-align: center;
     font-size: 12px;
@@ -433,6 +433,117 @@
     margin-left: 15px;
     line-height: 1.8; }
 
+#alert1 {
+  color: #eee8e5;
+  background-color: #3e70fe;
+  margin-left: 33.33%; }
+
+#alert2 {
+  color: #eee8e5;
+  background-color: #3e70fe;
+  margin-left: 33.33%; }
+
+.form-reservas {
+  margin: 15px 80px;
+  border: #3e70fe solid 2px;
+  padding: 25px; }
+
+.col-6 {
+  padding: 15px; }
+
+.card-body {
+  border: solid #3e70fe 2px; }
+
+/**habitaciones css*/
+.boton-reserva {
+  padding: 5px;
+  border: none;
+  background-color: #3e70fe;
+  color: #eee8e5;
+  border-radius: 5px; }
+
+#valor-total {
+  font-style: italic;
+  font-weight: bold; }
+
+.infoReserva {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #eee8e5; }
+
+.infoReserva div {
+  padding: 20px; }
+
+.font-reservas {
+  font-size: 15px; }
+
+.card-title {
+  font-size: 25px;
+  padding: 20px; }
+
+.titulo-reservas {
+  text-align: center;
+  padding: 25px; }
+
+.bkgReservas {
+  background-image: url(../assets/img/reservas-img.jpg);
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box; }
+
+.col-lg-8 {
+  width: auto; }
+
+.centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.room-content {
+  margin: 15px 20px; }
+
+.room-content h2 {
+  font-size: 25px;
+  margin-bottom: 5px; }
+
+.room-content h4 {
+  font-size: 18px;
+  color: #3e70fe;
+  margin-bottom: 20px;
+  text-transform: capitalize; }
+
+.hab-reservas {
+  margin: 25px 0; }
+
+.room-content a {
+  display: block;
+  padding-bottom: 10px;
+  color: #42af8e; }
+
+.btn-room {
+  padding: 5px 8px;
+  font-size: 20px;
+  color: #3e70fe;
+  border: #3e70fe solid 1px; }
+
+.btn-room:hover {
+  color: #fff;
+  background-color: #3e70fe;
+  border-color: #3e70fe; }
+
+.contenedorHabIndex h4 {
+  font-size: 18px;
+  color: #3e70fe;
+  margin-bottom: 20px;
+  text-transform: capitalize; }
+
 * {
   margin: 0;
   padding: 0;
@@ -563,6 +674,14 @@ footer {
 
 /*mediaquerys*/
 @media only screen and (max-width: 768px) {
+  .weekdays li,
+  .days li {
+    width: 13.1%; }
+  /**reservas*/
+  .infoReserva {
+    flex-wrap: wrap; }
+  .hab-reservas {
+    flex-direction: column; }
   /*generales*/
   .titulos {
     font-size: 25px; }
@@ -634,6 +753,13 @@ footer {
     justify-content: center; } }
 
 @media only screen and (max-width: 576px) {
+  /*reservas*/
+  .infoReserva {
+    flex-wrap: wrap; }
+    .infoReserva .bkg-imagen {
+      height: 400px; }
+    .infoReserva .bkg-imagen .pag-reservas {
+      padding: 100px; }
   /*generales*/
   header {
     flex-direction: column;
@@ -745,11 +871,6 @@ footer {
     grid-row: 4/5; }
   .galleryNos__item--5 {
     grid-column: 1/2;
-    grid-row: 5/6; }
-  /*Reservar*/
-  .bkg-imagen {
-    height: 400px; }
-    .bkg-imagen .pag-reservas {
-      padding: 100px; } }
+    grid-row: 5/6; } }
 
 /*# sourceMappingURL=style.css.map */

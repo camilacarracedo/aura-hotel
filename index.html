@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="./assets/icon/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Aura Hotel & Suites-Home</title>
 </head>
@@ -53,24 +54,27 @@
 
 <main>
 <section class="indexBackImg">
-    <form action="procesar.php" name="contacto" method="post">
+    <form id="reserva" name="contacto" method="post" autocomplete="off">
+        <span id="alert1"></span><br>
+        <span id="alert2"></span>
         <div class="formularioCheckin">
-            <p>
+            <div>
             <label>Check-in<i class="fa-solid fa-calendar-days"></i>
-                <input type="date" name="fecha" placeholder="" required>
+                <input type="date" name="check-in" id="check-in" required>
             </label>
-            </p>  
-            <p>
+            </div>  
+            <div>
                 <label>Check-out<i class="fa-solid fa-calendar-days"></i>
-                    <input type="date" name="fecha" placeholder="" required>
+                    <input type="date"  name="check-out" id="check-out">
                 </label>
-            </p> 
-            <p>
+            </div> 
+            <div>
                 <label>Huespedes
-                    <input class="checkinHuespedes" type="number" name="huespedes" placeholder="2" required>
+                    <select name="guests" id="pasajeros" class="form-control-sm"><option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
                 </label>
-            </p>
-            <button class="checkinBoton" type="submit">Reservar<i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <a href="#" type="submit">
+                <button class="checkinBoton" id="book" type="button" >Reservar<i class="fa-solid fa-chevron-right"></i></button></a>
         </div>
     </form>
 </section>
@@ -117,6 +121,7 @@
                 <p><i class="fa-solid fa-people-group"></i>5 personas</p>
                 <p><i class="fa-solid fa-maximize"></i>60 m2</p>
             </div>
+            <h4>$3000 <span>/ Noche</span></h4>
             <a class="habitacionBoton" href="./pages/habitaciones.html">Mas Informacion</a>
         </div>
         <div class="HabIndex" data-aos="fade-up" data-aos-duration="2000">
@@ -127,6 +132,7 @@
                 <p><i class="fa-solid fa-people-group"></i>3 personas</p>
                 <p><i class="fa-solid fa-maximize"></i>40 m2</p>
             </div>
+            <h4>$2000 <span>/ Noche</span></h4>
             <a  class="habitacionBoton" href="./pages/habitaciones.html">Mas Informacion</a>
         </div>
         <div class="HabIndex" data-aos="fade-up" data-aos-duration="2000">
@@ -137,6 +143,7 @@
                 <p><i class="fa-solid fa-people-group"></i>2 personas</p>
                 <p><i class="fa-solid fa-maximize"></i>35 m2</p>
             </div>
+            <h4>$1000 <span>/ Noche</span></h4>
             <a  class="habitacionBoton" href="./pages/habitaciones.html">Mas Informacion</a> 
         </div>
     </article>    
@@ -176,6 +183,9 @@
         </div>
     </section>
 </footer>
+<script src="./js/script.js"></script>
+<script src="./js/reservar.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="https://kit.fontawesome.com/c3a150fd4e.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

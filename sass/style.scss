@@ -8,6 +8,7 @@
 @import "sobrenosotros.scss";
 @import "contacto.scss";
 @import "habitaciones.scss";
+@import "reservar.scss";
 
 * {
     margin: 0;
@@ -151,6 +152,17 @@ footer {
 }
 /*mediaquerys*/
 @media only screen and (max-width: 768px) {
+.weekdays li,
+.days li{
+    width: 13.1%;
+}
+/**reservas*/
+.infoReserva{
+    flex-wrap: wrap;
+}
+.hab-reservas{
+    flex-direction: column;
+}
 /*generales*/
 .titulos {
     font-size: 25px;
@@ -249,6 +261,14 @@ footer h3 {
 }
 }
 @media only screen and (max-width: 576px) {
+/*reservas*/
+.infoReserva{
+    flex-wrap: wrap;
+.bkg-imagen {
+    height: 400px; }
+    .bkg-imagen .pag-reservas {
+        padding: 100px; } }
+
 /*generales*/
 header {
     flex-direction: column;
@@ -401,13 +421,6 @@ footer h3 {
 .galleryNos__item--5 {
     grid-column: 1/2;
     grid-row: 5/6;
-}
-/*Reservar*/
-.bkg-imagen {
-    height: 400px;
-    .pag-reservas{
-    padding: 100px;
-    }
 }
 }
 
